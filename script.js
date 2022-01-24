@@ -71,3 +71,21 @@ console.log(age1, age2)
 // two different types of functions, with the same reuslts, but will have different needs at times. 
 // you can call a function delcaration before you define it (might not be a good idea) while you cannot do that for a function expression(initialization error)
 */
+
+//Function expression
+ const calcAge2 = function (birthYear) {   
+  return 2037 - birthYear;
+}
+
+//arrow function - special form of a function expression that is a lot easier and faster to write. the return is implicite. 
+const calcAge3 = birthYear => 2037 - birthYear;
+const age3 = calcAge3(1986);
+console.log(age3);
+
+const yearsUntilRetirement = birthYear => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  return retirement; // the implicite return only works with one line of code, need to explicitely state return otherwise. 
+}
+
+console.log(yearsUntilRetirement(1986));
