@@ -82,10 +82,11 @@ const calcAge3 = birthYear => 2037 - birthYear;
 const age3 = calcAge3(1986);
 console.log(age3);
 
-const yearsUntilRetirement = birthYear => {
+const yearsUntilRetirement = (birthYear, firstName) => {
   const age = 2037 - birthYear;
   const retirement = 65 - age;
-  return retirement; // the implicite return only works with one line of code, need to explicitely state return otherwise. 
+  return `${firstName} retires in ${retirement} years`; // the implicite return only works with one line of code, need to explicitely state return otherwise. 
 }
 
-console.log(yearsUntilRetirement(1986));
+console.log(yearsUntilRetirement(1986, 'Mike'));
+
